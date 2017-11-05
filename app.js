@@ -105,6 +105,8 @@ window.addEventListener('load', function() {
       }
     };
 
+    }else{
+      document.getElementById("counter").remove();
     }
   }
 
