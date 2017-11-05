@@ -103,7 +103,7 @@ window.addEventListener('load', function() {
         'You are not logged in! Please log in to continue.';
       //my
       if (document.getElementById("counter")){
-        document.getElementById("counter").remove(
+        document.getElementById("counter").remove();
       }
       //end my  
     }
