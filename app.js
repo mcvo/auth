@@ -104,7 +104,7 @@ window.addEventListener('load', function() {
       //my
       if (document.getElementById("counter")){
         document.getElementById("counter").remove(
-      };
+      }
       //end my  
     }
   }
