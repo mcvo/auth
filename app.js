@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
     domain: "testappone.eu.auth0.com",
     clientID: "3cgyQE742ODFs5zKRcGAFOFqK8uhqjyf",
     redirectUri: window.location.href,
-    audience: 'http://' + AUTH0_DOMAIN + '/userinfo',
+    audience: 'https://' + AUTH0_DOMAIN + '/userinfo',
     responseType: 'token id_token',
     scope: 'openid',
     leeway: 60
