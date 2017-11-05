@@ -18,7 +18,6 @@ window.addEventListener('load', function() {
   var loginView = document.getElementById('login-view');
   var homeView = document.getElementById('home-view');
   var counter = 0;
-  var myElem = document.getElementById("counter");
 
   // buttons and event listeners
   var homeViewBtn = document.getElementById('btn-home-view');
@@ -103,7 +102,9 @@ window.addEventListener('load', function() {
       loginStatus.innerHTML =
         'You are not logged in! Please log in to continue.';
       //my
-      if (myElem) myElem.remove();
+      if (document.getElementById("counter")){
+        document.getElementById("counter").remove(
+      };
       //end my  
     }
   }
