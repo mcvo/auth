@@ -103,9 +103,7 @@ window.addEventListener('load', function() {
       loginStatus.innerHTML =
         'You are not logged in! Please log in to continue.';
       //my
-      
-if (myElem === !null) myElem.remove();;
-      
+      if (myElem) myElem.remove();;
       //end my  
     }
   }
