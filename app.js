@@ -84,29 +84,26 @@ window.addEventListener('load', function() {
       loginBtn.style.display = 'none';
       logoutBtn.style.display = 'inline-block';
       loginStatus.innerHTML = 'You are logged in!';
-      appmain();
+      //my
+      var btn = document.createElement("p");
+      btn.setAttribute("id", "counter");
+      homeView.appendChild(btn);
+
+      document.onkeypress = function(e){
+        if((e || window.event).keyCode === 32){
+          counter ++;
+          document.getElementById("counter").innerHTML = counter;
+        }
+      };
+      //end my
     } else {
       loginBtn.style.display = 'inline-block';
       logoutBtn.style.display = 'none';
       loginStatus.innerHTML =
         'You are not logged in! Please log in to continue.';
-    }
-  }
-    function appmain() {
-    if (isAuthenticated()) {
-    var btn = document.createElement("p");
-    btn.setAttribute("id", "counter");
-    homeView.appendChild(btn);
-
-    document.onkeypress = function(e){
-      if((e || window.event).keyCode === 32){
-        counter ++;
-        document.getElementById("counter").innerHTML = counter;
-      }
-    };
-
-    }else{
+      //my
       document.getElementById("counter").remove();
+      //end my  
     }
   }
 
