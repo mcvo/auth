@@ -86,6 +86,8 @@ window.addEventListener('load', function() {
       loginStatus.innerHTML = 'You are logged in!';
       //my
       var btn = document.createElement("p");
+      var t = document.createTextNode("Press Space");
+      btn.appendChild(t);
       btn.setAttribute("id", "counter");
       homeView.appendChild(btn);
 
