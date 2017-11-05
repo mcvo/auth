@@ -96,7 +96,7 @@ window.addEventListener('load', function() {
     if (isAuthenticated()) {
     var btn = document.createElement("p");
     btn.setAttribute("id", "counter");
-    document.body.appendChild(btn);
+    homeView.appendChild(btn);
 
     document.onkeypress = function(e){
       if((e || window.event).keyCode === 32){
