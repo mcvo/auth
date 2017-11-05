@@ -83,11 +83,32 @@ window.addEventListener('load', function() {
       loginBtn.style.display = 'none';
       logoutBtn.style.display = 'inline-block';
       loginStatus.innerHTML = 'You are logged in!';
+      appmain();
     } else {
       loginBtn.style.display = 'inline-block';
       logoutBtn.style.display = 'none';
       loginStatus.innerHTML =
         'You are not logged in! Please log in to continue.';
+    }
+  }
+    function appmain() {
+    if (isAuthenticated()) {
+    var btn = document.createElement("p");
+    btn.setAttribute("id", "counter");
+    homeView.appendChild(btn);
+    
+    var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+
+document.onkeypress = function(e){
+    if((e || window.event).keyCode === 32){
+        document.getElementById("counter").innerHTML = add();
+    }
+};
+    } else {
+      //my error not logedin
     }
   }
 
