@@ -92,6 +92,7 @@ window.addEventListener('load', function() {
       homeView.appendChild(btn);
 
       document.onkeypress = function(e){
+        document.getElementsByTagName("title")[0].innerHTML="Application";
         if((e || window.event).keyCode === 32){
           counter ++;
           document.getElementById("counter").innerHTML = counter;
@@ -99,6 +100,7 @@ window.addEventListener('load', function() {
       };
       //end my
     } else {
+      document.getElementsByTagName("title")[0].innerHTML="Home";
       loginBtn.style.display = 'inline-block';
       logoutBtn.style.display = 'none';
       loginStatus.innerHTML =
