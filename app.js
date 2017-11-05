@@ -17,6 +17,7 @@ window.addEventListener('load', function() {
   var loginStatus = document.querySelector('.container h4');
   var loginView = document.getElementById('login-view');
   var homeView = document.getElementById('home-view');
+  var counter = 0;
 
   // buttons and event listeners
   var homeViewBtn = document.getElementById('btn-home-view');
@@ -95,20 +96,15 @@ window.addEventListener('load', function() {
     if (isAuthenticated()) {
     var btn = document.createElement("p");
     btn.setAttribute("id", "counter");
-    homeView.appendChild(btn);
-    
-    var add = (function () {
-    var counter = 0;
-    return function () {return counter += 1;}
-})();
+    document.body.appendChild(btn);
 
-document.onkeypress = function(e){
-    if((e || window.event).keyCode === 32){
-        document.getElementById("counter").innerHTML = add();
-    }
-};
-    } else {
-      //my error not logedin
+    document.onkeypress = function(e){
+      if((e || window.event).keyCode === 32){
+        counter ++;
+        document.getElementById("counter").innerHTML = counter;
+      }
+    };
+
     }
   }
 
