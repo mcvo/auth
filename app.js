@@ -91,8 +91,9 @@ window.addEventListener('load', function() {
       btn.setAttribute("id", "counter");
       homeView.appendChild(btn);
 
+      document.getElementsByTagName("title")[0].innerHTML="Application";
       document.onkeypress = function(e){
-        document.getElementsByTagName("title")[0].innerHTML="Application";
+        
         if((e || window.event).keyCode === 32){
           counter ++;
           document.getElementById("counter").innerHTML = counter;
