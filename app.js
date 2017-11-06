@@ -92,7 +92,7 @@ window.addEventListener('load', function() {
       homeView.appendChild(btn);
 
       document.getElementsByTagName("title")[0].innerHTML="Application";
-      document.onkeypress = function(e){
+      document.onkeyup = function(e){
         
         if((e || window.event).keyCode === 32){
           counter ++;
