@@ -93,10 +93,11 @@ window.addEventListener('load', function() {
 
       document.getElementsByTagName("title")[0].innerHTML="Application";
       document.onkeyup = function(e){
-        
+        if (document.getElementById("counter")){
         if((e || window.event).keyCode === 32){
           counter ++;
           document.getElementById("counter").innerHTML = counter;
+        }
         }
       };
       //end my
